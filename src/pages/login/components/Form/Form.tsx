@@ -22,7 +22,7 @@ function Form() {
    const isError = input === "";
 
    return (
-      <FormControl isInvalid={!isError}>
+      <FormControl isInvalid={isError}>
          <Stack spacing={4}>
             <InputIcon
                title="Username"
