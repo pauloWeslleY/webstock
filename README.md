@@ -1,4 +1,4 @@
-## Prévia do Projeto SimpleWebStock
+## Prévia do Projeto - System WebStock (SimpleWebStock)
 
 
 ![Imagem do Site](https://weslleylima.vercel.app/images/bg_images/webstock.png)
