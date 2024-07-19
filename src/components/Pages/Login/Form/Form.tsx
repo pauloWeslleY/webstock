@@ -3,7 +3,7 @@ import { Flex, FormControl, Icon, Stack, useToast } from "@chakra-ui/react";
 import { RiUserFill } from "react-icons/ri";
 import { HiLockClosed } from "react-icons/hi";
 
-import { Input as InputBar } from "../Input";
+import { InputField } from "../InputField";
 import { Btn } from "../../../Buttons";
 
 function Form() {
@@ -19,7 +19,7 @@ function Form() {
 		fixme ==> Validação do campos do input Login e Senha!
 	*/
 	const handleValidateUsername = () => {
-		if (username === "") {
+		if (username.length === 0) {
 			toast({
 				title: "Digite seu usuário!",
 				status: "warning",
@@ -53,7 +53,7 @@ function Form() {
 	return (
 		<FormControl isRequired>
 			<Stack spacing={4}>
-				<InputBar
+				<InputField
 					icon={<Icon as={RiUserFill} w={4} h={4} color={"gray.100"} />}
 					title="Username"
 					types={"text"}
@@ -62,7 +62,7 @@ function Form() {
 					value={username}
 					onChange={(event) => setUsername(event.target.value)}
 				/>
-				<InputBar
+				<InputField
 					icon={<Icon as={HiLockClosed} w={4} h={4} color={"gray.100"} />}
 					title="Password"
 					types={"password"}
